@@ -78,8 +78,11 @@ Use the command given below to run automated tests.
 ## Technologies Used
 
 Django - web framework used
+
 CSS
+
 HTML
+
 JavaScript
 
 ## MIT License
