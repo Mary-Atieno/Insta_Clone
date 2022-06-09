@@ -75,7 +75,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.humanize',
     # 'insta',
-    
+    'tinymce',
     "bootstrap4",
 
     #own
@@ -190,9 +190,6 @@ django_heroku.settings(locals())
 
 LOGIN_REDIRECT_URL = 'index'
 
-LOGOUT_REDIRECT_URL = 'sign-in'
-
-LOGIN_URL = 'sign-in'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 

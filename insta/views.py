@@ -16,11 +16,12 @@ from insta.models import Profile
 from .forms import EditProfileForm, UserRegisterForm
 from django.urls import resolve
 from comment.models import Comment
-# import login_required
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
-# def index(request):
-#     return render(request, 'index.html')
+@login_required(login_url='/accounts/login/')
+def index(request):
+   return render(request, 'index.html')
 # @login_required
 # def account_overview(request):
 

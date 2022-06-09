@@ -6,7 +6,7 @@ from insta.views import UserProfile, EditProfile
 
 urlpatterns = [
     #  profile section
-    # path('', views.index, name="index"),
+    path('', views.index, name="index"),
     path('profile/edit', EditProfile, name="editprofile"),
 
     # User Authentication

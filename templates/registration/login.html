@@ -1,3 +1,6 @@
+{%extends "registration/base.html"%}
+{% load bootstrap4 %}
+{% block content %}
 {% load static %}
 
 <!DOCTYPE html>
@@ -18,21 +21,19 @@
     <div class="container">
       <div class="phone-app-demo"></div>
       <div class="form-data">
-        <form action="" method="POST">{% csrf_token %}
-          <div class="logo">
-              <img src="/static/assets2/images/logo.png" alt="logo">
-            <!-- <img src="{% static 'assets2/images/logo.png' %}" alt="logo"> -->
-          </div>
-          <!-- <input type="text" placeholder="Phone number, username, or email"> -->
-          <!-- <input type="password" placeholder="Password"> -->
-          {{form}}
-          <button class="form-btn" type="submit">Log in</button>
-          <!-- <a href="index.html" class="form-btn" type="submit">Log in</a> -->
-          <span class="has-separator">Or</span>
-          <a class="facebook-login" href="#">
+        <form style="margin:20px;" action="/accounts/login/" method="POST">
+          {% csrf_token %}
+          {% bootstrap_form form%}
+          <button class="form-btn btn-info btn-md" style="padding-left:130px;padding-right:130px; margin:20px;"
+            type="submit">Log in</button>
+          <br><br>
+          <p class="has-separator" style="margin-left: 150px;">Or</p>
+          <br>
+          <a class="facebook-login" style="margin-left: 100px;" href="https://www.facebook.com/">
             <i class="fab fa-facebook-square"></i> Log in with Facebook
           </a>
-          <a class="password-reset" href="#">Forgot password?</a>
+          <br><br>
+          <a class="password-reset" style="margin-left: 125px;" href="#">Forgot password?</a>
         </form>
         <div class="sign-up">
           Don't have an account? <a href="{% url 'sign-up' %}">Sign up</a>
@@ -40,7 +41,7 @@
         <div class="get-the-app">
           <span>Get the app.</span>
           <div class="badges">
-                        <img src="/static/assets2/images/app-store.png" alt="app-store badge">
+            <img src="/static/assets2/images/app-store.png" alt="app-store badge">
 
             <img src="/static/assets2/images/google-play.png" alt="google-play badge">
 
@@ -51,3 +52,4 @@
 </body>
 
 </html>
+{% endblock %}
