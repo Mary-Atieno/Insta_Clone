@@ -57,7 +57,6 @@ def UserProfile(request, username):
         'followers_count':followers_count,
         'posts_paginator':posts_paginator,
         'follow_status':follow_status,
-        # 'count_comment':count_comment,
     }
     return render(request, 'profile.html', context)
 
